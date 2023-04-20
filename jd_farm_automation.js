@@ -8,7 +8,7 @@ console.log('默认种2级，如需调整请设置变量 M_JD_FARM_LEVEL\n使用
 require("global-agent/bootstrap");
 global.GLOBAL_AGENT.HTTP_PROXY="http://192.168.1.199:11080";
 const {Env} = require('./function/magic');
-const $ = new Env('农场自动种植兑换');
+const $ = new Env('农场自动种植兑换（去掉兑换）');
 let level = process.env.M_JD_FARM_LEVEL ? process.env.M_JD_FARM_LEVEL * 1 : 2
 $.logic = async function () {
     let info = await api('initForFarm',
